@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-kafka-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-kafka-app
+  template:
+    metadata:
+      labels:
+        app: spring-kafka-app
+    spec:
+      containers:
+        - name: spring-kafka-container
+          image: my-repo/my-app:latest # Replace with your actual image
+          ports:
+            - containerPort: 8080

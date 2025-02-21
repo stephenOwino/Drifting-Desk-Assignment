@@ -1,0 +1,23 @@
+# IDE directories
+.idea/
+.vscode/
+
+# Maven Wrapper
+.mvn/
+
+# Build files
+target/
+*.jar
+*.war
+*.ear
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Other unnecessary files
+mvnw
+mvnw.cmd
+
+
+
