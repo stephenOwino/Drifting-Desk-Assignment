@@ -12,8 +12,10 @@ spec:
       labels:
         app: spring-kafka-app
     spec:
+      imagePullSecrets:
+        - name: dockerhub-key
       containers:
         - name: spring-kafka-container
-          image: my-repo/my-app:latest # Replace with your actual image
+          image: otizaaa/otis-app:latest
           ports:
             - containerPort: 8080
