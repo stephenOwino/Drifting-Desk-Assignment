@@ -1,19 +1,18 @@
+
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: springboot-dashboard-ingress
-  namespace: kubernetes-dashboard
-
+  name: spring-kafka-ingress
+  namespace: default
 spec:
   rules:
     - host: otieno-ingress.com
       http:
         paths:
-          - path: /dashboard
+          - path: /
             pathType: Prefix
             backend:
               service:
-                name: kubernetes-dashboard
+                name: spring-kafka-service
                 port:
                   number: 80
-

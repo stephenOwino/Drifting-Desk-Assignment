@@ -18,7 +18,7 @@ public class ProducerController {
 
     private final KafkaTemplate<String, String> kafkaTemplate;
 
-    @Autowired
+    //constructor injection
     public ProducerController(KafkaTemplate<String, String> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
     }

@@ -1,4 +1,6 @@
+
 FROM openjdk:17-jdk-slim
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+WORKDIR /app
+COPY ./target/demo-0.0.1-SNAPSHOT.jar /app/otis-app.jar
+ENTRYPOINT ["java", "-jar", "/otis-app.jar"]
+
